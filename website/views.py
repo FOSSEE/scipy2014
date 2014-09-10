@@ -14,3 +14,6 @@ def venue(request):
     
 def contact(request):
     return render(request, 'website/templates/contact.html')
+
+def register(request):
+    return render(request, 'website/templates/register.html')

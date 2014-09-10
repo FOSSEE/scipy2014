@@ -36,7 +36,7 @@
                             <li><a href="{% url 'website:contact' %}">Contact Us</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#">Register</a></li>
+                            <li><a href="{% url 'website:register' %}">Register</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
@@ -45,7 +45,7 @@
             <div id="page-header">
                 <div id="stage">
                     <img id="scipy-logo" src="{% static 'website/images/scipy_india_logo.png' %}" width="30">
-                    <h3 id="brand">Scipy India 2014 &mdash; <span id="current">Schedule</span></h3>
+                    <h3 id="brand">Scipy India 2014 &mdash; <span id="current">{% block current %}Schedule{% endblock %}</span></h3>
                 </div>
             </div> <!-- /#page-header -->
         </div> <!-- /#header-wrapper -->
@@ -54,11 +54,11 @@
             <div id="page-content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-3" id="sidebar">
+                        <div class="col-md-0" id="sidebar">
                             {% block sidebar %}
                             {% endblock %}
                         </div>
-                        <div class="col-md-9 text-justify">
+                        <div class="col-md-12 text-justify">
                             {% block content %}
                             {% endblock %}
                         </div> <!-- /.col -->

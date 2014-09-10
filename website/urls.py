@@ -5,4 +5,5 @@ urlpatterns = patterns('',
     url(r'^page/$', 'website.views.page', name='page'),
     url(r'^venue/$', 'website.views.venue', name='venue'),
     url(r'^contact/$', 'website.views.contact', name='contact'),
+    url(r'^register/$', 'website.views.register', name='register'),
 )
