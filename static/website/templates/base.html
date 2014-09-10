@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Scipy Conf</title>
+    <title>SciPy India 2014</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'website/css/main.css'%}">
 </head>
@@ -27,13 +27,13 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Call for papers</a></li>
+                            <li><a href="{% url 'website:home' %}">Home</a></li>
+                            <!--li><a href="#">Call for papers</a></li>
                             <li class="active"><a href="#">Schedule</a></li>
                             <li><a href="#">Invited Speakers</a></li>
-                            <li><a href="#">Sponsors</a></li>
-                            <li><a href="#">Venue</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Sponsors</a></li-->
+                            <li><a href="{% url 'website:venue' %}">Venue</a></li>
+                            <li><a href="{% url 'website:contact' %}">Contact Us</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="#">Register</a></li>

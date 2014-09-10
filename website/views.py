@@ -8,3 +8,9 @@ def home(request):
 
 def page(request):
     return render(request, 'website/templates/page.html')
+
+def venue(request):
+    return render(request, 'website/templates/venue.html')
+    
+def contact(request):
+    return render(request, 'website/templates/contact.html')
