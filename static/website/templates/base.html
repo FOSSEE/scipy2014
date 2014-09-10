@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scipy Conf</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'website/css/main.css'%}">
+</head>
+<body>
+    <div id="page-wrapper">
+        <div id="header-wrapper">
+            <div id="main-nav">
+                <nav class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!-- <a class="navbar&#45;brand" href="#">Brand</a> -->
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Call for papers</a></li>
+                            <li class="active"><a href="#">Schedule</a></li>
+                            <li><a href="#">Invited Speakers</a></li>
+                            <li><a href="#">Sponsors</a></li>
+                            <li><a href="#">Venue</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">Register</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+                </nav>
+            </div> <!-- /#main-nav -->
+            <div id="page-header">
+                <div id="stage">
+                    <img id="scipy-logo" src="{% static 'website/images/scipy_india_logo.png' %}" width="30">
+                    <h3 id="brand">Scipy India 2014 &mdash; <span id="current">Schedule</span></h3>
+                </div>
+            </div> <!-- /#page-header -->
+        </div> <!-- /#header-wrapper -->
+        
+        <div id="content-wrapper">
+            <div id="page-content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3" id="sidebar">
+                            {% block sidebar %}
+                            {% endblock %}
+                        </div>
+                        <div class="col-md-9 text-justify">
+                            {% block content %}
+                            {% endblock %}
+                        </div> <!-- /.col -->
+                    </div> <!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div> <!-- /#page-content -->
+        </div> <!-- /#content-wrapper -->
+        
+    </div> <!-- /#page-wrapper -->
+    <div id="footer-wrapper">
+        <div id="footer">
+            <div class="pull-left">
+                &copy; 2014 Scipy India.
+            </div>
+            <div class="pull-right">
+                <i>Developed by</i> <a href="http://fossee.in" target="_blank">FOSSEE</a>
+            </div>
+            <div class="clearfix"></div>
+        </div> <!-- /#footer -->
+    </div> <!-- /#footer-wrapper -->
+
+    <div id="social">
+        <ul>
+            <li><a href=""><img src="{% static 'website/images/facebook.png' %}" alt="fb"></a></li>
+            <li><a href=""><img src="{% static 'website/images/twitter.png' %}" alt="tw"></a></li>
+            <li><a href=""><img src="{% static 'website/images/googleplus.png' %}" alt="gp"></a></li>
+        </ul>
+    </div> <!-- /#social -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="{% static 'website/js/holder.js' %}"></script>
+<script type="text/javascript" charset="utf-8">
+   $('#sidebar .nav-group').affix({
+      offset: {
+        top: 200
+      }
+    });
+
+    $("body").scrollspy({
+        target: '#sidebar',
+        offset: 30
+    }); 
+</script>
+</body>
+</html>

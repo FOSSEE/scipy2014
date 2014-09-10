@@ -1,0 +1,225 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scipy Conf</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'website/css/main.css'%}">
+</head>
+<body>
+    <div id="page-wrapper">
+        <div id="header-wrapper">
+            <div id="main-nav">
+                <nav class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!-- <a class="navbar&#45;brand" href="#">Brand</a> -->
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#">Call for papers</a></li>
+                            <li><a href="#">Schedule</a></li>
+                            <li><a href="#">Invited Speakers</a></li>
+                            <li><a href="#">Sponsors</a></li>
+                            <li><a href="#">Venue</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">Register</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+                </nav>
+            </div> <!-- /#main-nav -->
+            <div id="header">
+                <div id="stage">
+                    <img id="scipy-logo" src="{% static 'website/images/scipy_india_logo.png' %}" width="50">
+                    <h1 id="shout">Scipy India 2014</h1>
+                    <h4 id="subtle">Dec 4<sup>th</sup> 5<sup>th</sup> and 6<sup>th</sup> IIT Bombay</h4>
+                    <hr style="width:250px;">
+                    <a class="btn btn-default" href="#">Register Now</a> or
+                    <a class="btn btn-default" href="#">Submit Paper</a>
+                </div>
+            </div> <!-- /#header -->
+        </div> <!-- /#header-wrapper -->
+        
+        <div id="content-wrapper">
+            <div id="content">
+                <div class="container-fluid">
+                    <div id="speakers">
+                        <h3 class="garmond" align="center"><u>Speakers</u></h3>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                    <img src="holder.js/100%x180">
+                                    <div class="caption">
+                                        Nicolas Valadez (<span class="garmond">Keynote</span>)
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                    <img src="holder.js/100%x180">
+                                    <div class="caption">
+                                        John Jarret (<span class="garmond">Keynote</span>)
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                    <img src="holder.js/100%x180">
+                                    <div class="caption">
+                                        Glenn Werner
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                    <img src="holder.js/100%x180">
+                                    <div class="caption">
+                                        Robert Ellis
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- /.row -->
+                    </div> <!-- /#speakers -->
+                    <hr> 
+                    <div id="conference">
+                        <h3 align="center" class="garmond"><u>Conference</u></h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4 class="garmond"><u>Scope of the conference</u></h4>
+                                <p class="text-justify">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
+                                <hr>
+                                <table class="table table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Dec 4<sup>th</sup></strong></td>
+                                            <td>Keynote</td>
+                                            <td><a href=""><small>View More</small></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Dec 5<sup>th</sup></strong></td>
+                                            <td>Tutorials</td>
+                                            <td><a href=""><small>View More</small></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Dec 5<sup>th</sup></strong></td>
+                                            <td>Lightning Talks</td>
+                                            <td><a href=""><small>View More</small></a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading garmond">
+                                        News and Updates
+                                    </div>
+                                    <div class="panel-body">
+                                        <ul class="media-list">
+                                            <li class="media">
+                                            <a class="pull-left" href="#">
+                                                <img class="media-object" src="holder.js/64x64" alt="...">
+                                            </a>
+                                            <div class="media-body">
+                                                <h5 class="media-heading">Media heading</h5>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                            </div>
+                                            </li>
+                                        </ul>
+                                        <ul class="media-list">
+                                            <li class="media">
+                                            <a class="pull-left" href="#">
+                                                <img class="media-object" src="holder.js/64x64" alt="...">
+                                            </a>
+                                            <div class="media-body">
+                                                <h5 class="media-heading">Media heading</h5>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                            </div>
+                                            </li>
+                                        </ul>
+                                        <ul class="media-list">
+                                            <li class="media">
+                                            <a class="pull-left" href="#">
+                                                <img class="media-object" src="holder.js/64x64" alt="...">
+                                            </a>
+                                            <div class="media-body">
+                                                <h5 class="media-heading">Media heading</h5>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                            </div>
+                                            </li>
+                                        </ul>
+                                    </div> <!-- /.panel-body -->
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div> <!-- /.row -->
+                    </div> <!-- /#conference-->
+                    <hr> 
+                    <div id="sponsors">
+                        <h3 class="garmond" align="center"><u>Sponsors</u></h3>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <img src="holder.js/100%x50">
+                            </div>
+                            <div class="col-md-2">
+                                <img src="holder.js/100%x50">
+                            </div>
+                            <div class="col-md-2">
+                                <img src="holder.js/100%x50">
+                            </div>
+                            <div class="col-md-2">
+                                <img src="holder.js/100%x50">
+                            </div>
+                            <div class="col-md-2">
+                                <img src="holder.js/100%x50">
+                            </div>
+                            <div class="col-md-2">
+                                <img src="holder.js/100%x50">
+                            </div>
+                            <div class="clearfix"></div>
+                        </div> <!-- /.row -->
+                    </div> <!-- /#sponsors -->
+                </div><!-- /.container-fluid -->
+            </div> <!-- /#content -->
+        </div> <!-- /#content-wrapper -->
+        
+    </div> <!-- /#page-wrapper -->
+    <div id="footer-wrapper">
+        <div id="footer">
+            <div class="pull-left">
+                &copy; 2014 Scipy India.
+            </div>
+            <div class="pull-right">
+                <i>Developed by</i> <a href="http://fossee.in" target="_blank">FOSSEE</a>
+            </div>
+            <div class="clearfix"></div>
+        </div> <!-- /#footer -->
+    </div> <!-- /#footer-wrapper -->
+
+    <div id="social">
+        <ul>
+            <li><a href=""><img src="{% static 'website/images/facebook.png' %}" alt="fb"></a></li>
+            <li><a href=""><img src="{% static 'website/images/twitter.png' %}" alt="tw"></a></li>
+            <li><a href=""><img src="{% static 'website/images/googleplus.png' %}" alt="gp"></a></li>
+        </ul>
+    </div> <!-- /#social -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="{% static 'website/js/holder.js' %}"></script>
+</body>
+</html>
