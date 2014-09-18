@@ -32,6 +32,7 @@
                             <li><a href="#">Schedule</a></li>
                             <li><a href="#">Invited Speakers</a></li>
                             <li><a href="#">Sponsors</a></li-->
+                            <li><a href="{% url 'website:papers' %}">Call for Papers</a></li>
                             <li><a href="{% url 'website:venue' %}">Venue</a></li>
                             <li><a href="{% url 'website:contact' %}">Contact Us</a></li-->
                         </ul>
@@ -46,7 +47,7 @@
                 <div id="stage">
                     <img id="scipy-logo" src="{% static 'website/images/scipy_india_logo.png' %}" width="50">
                     <h1 id="shout">Scipy India 2014</h1>
-                    <h4 id="subtle">Dec 5<sup>th</sup> and 6<sup>th</sup> IIT Bombay</h4>
+                    <h4 id="subtle">Dec. 5<sup>th</sup>, 6<sup>th</sup> and 7<sup>th</sup> IIT Bombay</h4>
                     <hr style="width:250px;">
                     <a class="btn btn-default" href="{% url 'website:register' %}">Register Now</a>
                     <!--a class="btn btn-default" href="#">Submit Paper</a-->
@@ -68,15 +69,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <!--div class="col-md-3">
+                            <div class="col-md-3">
                                 <div class="thumbnail">
                                     <img src="{% static 'website/images/ajith.jpeg' %}">
                                     <div class="caption">
                                         Ajith Kumar
                                     </div>
                                 </div>
-                            </div-->
-                            <div class="col-md-9">
+                            </div>
+                            <div class="col-md-6">
                                 <div class="panel panel-default">
                                     <div class="panel-heading garmond">
                                         News and Updates

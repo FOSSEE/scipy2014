@@ -6,4 +6,5 @@ urlpatterns = patterns('',
     url(r'^venue/$', 'website.views.venue', name='venue'),
     url(r'^contact/$', 'website.views.contact', name='contact'),
     url(r'^register/$', 'website.views.register', name='register'),
+    url(r'^call-for-papers/$', 'website.views.papers', name='papers'),
 )

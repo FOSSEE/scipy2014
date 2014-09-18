@@ -17,3 +17,6 @@ def contact(request):
 
 def register(request):
     return render(request, 'website/templates/register.html')
+    
+def papers(request):
+    return render(request, 'website/templates/papers.html')
