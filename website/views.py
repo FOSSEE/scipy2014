@@ -18,5 +18,14 @@ def contact(request):
 def register(request):
     return render(request, 'website/templates/register.html')
     
-def papers(request):
-    return render(request, 'website/templates/papers.html')
+def schedule(request):
+    return render(request, 'website/templates/schedule.html')
+
+def sponsors(request):
+    return render(request, 'website/templates/sponsors.html')
+
+def invited_speakers(request):
+    return render(request, 'website/templates/invited-speakers.html')
+
+def call_for_proposals(request):
+    return render(request, 'website/templates/call-for-proposals.html')

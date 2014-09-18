@@ -27,12 +27,11 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Home</a></li>
-                            <!--<li><a href="#">Call for papers</a></li>
-                            <li><a href="#">Schedule</a></li>
+                            <li class="active"><a href="{% url 'website:home'%}">Home</a></li>
+                            <li><a href="{% url 'website:call_for_proposals' %}">Call for Proposals</a></li>
+                            <li><a href="{% url 'website:schedule' %}">Schedule</a></li>
                             <li><a href="#">Invited Speakers</a></li>
-                            <li><a href="#">Sponsors</a></li-->
-                            <li><a href="{% url 'website:papers' %}">Call for Papers</a></li>
+                            <li><a href="#">Sponsors</a></li>
                             <li><a href="{% url 'website:venue' %}">Venue</a></li>
                             <li><a href="{% url 'website:contact' %}">Contact Us</a></li-->
                         </ul>
@@ -50,7 +49,7 @@
                     <h4 id="subtle">Dec. 5<sup>th</sup>,  6<sup>th</sup> and 7<sup>th</sup> IIT Bombay</h4>
                     <hr style="width:250px;">
                     <a class="btn btn-default" href="{% url 'website:register' %}">Register Now</a> or
-                    <a class="btn btn-default" href="#">Submit Paper</a>
+                    <a class="btn btn-default" href="{% url 'website:call_for_proposals' %}">Submit Proposal</a>
                 </div>
             </div> <!-- /#header -->
         </div> <!-- /#header-wrapper -->
@@ -156,11 +155,13 @@
                                     <h4 class="garmond" align="center"><u>Important Dates</u></h4>
                                     <table class="table table-bordered">
                                         <tr>
-                                            <td>5<sup>th</sup> Nov 2014</td>
-                                            <td>Call for papers ends.</td>
+                                            <!-- <td>5<sup>th</sup> Nov 2014</td> -->
+                                            <td>TBA</td>
+                                            <td>Call for Proposals ends.</td>
                                         </tr>
                                         <tr>
-                                            <td>10<sup>th</sup> Nov 2014</td>
+                                            <!-- <td>10<sup>th</sup> Nov 2014</td> -->
+                                            <td>TBA</td>
                                             <td>Conference Registration ends.</td>
                                         </tr>
                                     </table>
@@ -188,12 +189,12 @@
                                         <tr>
                                             <td><a href="http://scipy.in/2013" target="_blank">SciPy India 2013</a></td>
                                             <td><a href="http://scipy.in/2013/schedule" target="_blank">Talks</a></td>
-                                            <td><a href="#" target="_blank">Gallery</a></td>
+                                            <td><a href="https://plus.google.com/photos/+ScipyIndia/albums/5958662267241508465" target="_blank">Gallery</a></td>
                                         </tr>
                                         <tr>
                                             <td><a href="http://scipy.in/2012" target="_blank">SciPy India 2012</a></td>
                                             <td><a href="http://scipy.in/2012/talks/" target="_blank">Talks</a></td>
-                                            <td><a href="#" target="_blank">Gallery</a></td>
+                                            <td><a href="https://plus.google.com/photos/+HardikGhaghada/albums/5830648864137819041" target="_blank">Gallery</a></td>
                                         </tr>
                                     </table>
                                 </div> <!-- /#previous -->
