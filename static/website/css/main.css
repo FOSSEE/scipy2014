@@ -186,3 +186,33 @@ body {
     /* fix first h2*/
     margin-top: 0;
 }
+#speakers .thumbnail {
+    height: 265px;
+}
+#speakers hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#speakers .extras {
+    text-align: center;
+}
+#speakers .extras .bio {
+    border-right: 1px solid #eeeeee;
+}
+#sponsors {
+    padding: 10px 15px 20px;
+    margin: 10px 0 10px 0;
+    text-align: center;
+    background: #fafafa;
+    border: 1px solid #cccccc;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+#sponsors img {
+    margin-top: 10px;
+}
+#twitter-widget-0 {
+    height: 265px;
+}

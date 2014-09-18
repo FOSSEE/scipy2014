@@ -46,11 +46,11 @@
             <div id="header">
                 <div id="stage">
                     <img id="scipy-logo" src="{% static 'website/images/scipy_india_logo.png' %}" width="50">
-                    <h1 id="shout">Scipy India 2014</h1>
-                    <h4 id="subtle">Dec. 5<sup>th</sup>, 6<sup>th</sup> and 7<sup>th</sup> IIT Bombay</h4>
+                    <h1 id="shout">SciPy India 2014</h1>
+                    <h4 id="subtle">Dec. 5<sup>th</sup>,  6<sup>th</sup> and 7<sup>th</sup> IIT Bombay</h4>
                     <hr style="width:250px;">
-                    <a class="btn btn-default" href="{% url 'website:register' %}">Register Now</a>
-                    <!--a class="btn btn-default" href="#">Submit Paper</a-->
+                    <a class="btn btn-default" href="{% url 'website:register' %}">Register Now</a> or
+                    <a class="btn btn-default" href="#">Submit Paper</a>
                 </div>
             </div> <!-- /#header -->
         </div> <!-- /#header-wrapper -->
@@ -59,70 +59,148 @@
             <div id="content">
                 <div class="container-fluid">
                     <div id="speakers">
-                        <h4 class="garmond"><u>Speakers</u></h4>
                         <div class="row">
-                            <div class="col-md-3">
-                                <div class="thumbnail">
-                                    <img src="{% static 'website/images/maciej.png' %}">
-                                    <div class="caption">
-                                        Maciej Fijałkowski (<span class="garmond">Keynote</span>)
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="thumbnail">
-                                    <img src="{% static 'website/images/ajith.jpeg' %}">
-                                    <div class="caption">
-                                        Ajith Kumar
-                                    </div>
-                                </div>
-                            </div>
                             <div class="col-md-6">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading garmond">
-                                        News and Updates
-                                    </div>
-                                    <div class="panel-body">
-                                                <a class="twitter-timeline"  href="https://twitter.com/SciPyIndia" data-widget-id="404921110312910848">Tweets by @SciPyIndia</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-          
-                                    </div> <!-- /.panel-body -->
-                                </div>
-                            </div><!-- col-md-6 -->
+                                <h4 class="garmond" align="center"><u>Speakers</u></h4>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="thumbnail">
+                                            <img src="{% static 'website/images/maciej.png' %}">
+                                            <div class="caption">
+                                                Maciej Fijałkowski (<span class="garmond">Keynote</span>)
+                                                <hr>
+                                                <div class="extras">
+                                                    <div class="row">
+                                                        <div class="col-md-6 bio">
+                                                            View Bio
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            Twitter
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> <!-- /.col -->
+                                    <div class="col-md-6">
+                                        <div class="thumbnail">
+                                            <img src="{% static 'website/images/ajith.jpeg' %}">
+                                            <div class="caption">
+                                                Ajith Kumar (<span class="garmond">Invited</span>)
+                                                <hr>
+                                                <div class="extras">
+                                                    <div class="row">
+                                                        <div class="col-md-6 bio">
+                                                            View Bio
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            Website
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> <!-- /.col -->
+                                </div> <!-- /.row -->
+                            </div> <!-- /.col -->
+                            
+                            <div class="col-md-6">
+                                <h4 class="garmond" align="center"><u>News and Updates</u></h4>
+                                <a class="twitter-timeline"  href="https://twitter.com/SciPyIndia" data-widget-id="404921110312910848">Tweets by @SciPyIndia</a>
+                                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                            </div><!-- /.col -->
                         </div> <!-- /.row -->
                     </div> <!-- /#speakers -->
                     <hr> 
                     <div id="conference">
-                        <h3 align="center" class="garmond"><u>Conference</u></h3>
                         <div class="row">
                             <div class="col-md-6">
-                                <h4 class="garmond"><u>Scope of the conference</u></h4>
+                                <h4 class="garmond" align="center"><u>Scope of the conference</u></h4>
                                 <p class="text-justify">
-                                    SciPy India is a conference providing opportunities to spread the use of the Python programming language in the Scientific Computing community in India. It provides a unique opportunity to interact with the "Who's who" of the Python for Scientific Computing fraternity and learn, understand, participate, and contribute to Scientific Computing using Python. Attendees of the conference and participants of the sprints planned will be able to access and review the tools available. They will also be able to learn domain-specific applications and how the tools apply to a plethora of application problems. One of the goals of the conference is to combine education, engineering, and science with computing through the medium of Python. This conference also aims to spread the use of Python for Scientific Computing in various fields and among different communities.
-SciPy India 2014 Organiser: FOSSEE   For more details visit: python.fossee.in, python.org
+                                    SciPy India is a conference providing
+                                    opportunities to spread the use of the
+                                    Python programming language in the
+                                    Scientific Computing community in India. It
+                                    provides a unique opportunity to interact
+                                    with the "Who's who" of the Python for
+                                    Scientific Computing fraternity and learn,
+                                    understand, participate, and contribute to
+                                    Scientific Computing using Python.
+                                    Attendees of the conference and
+                                    participants of the sprints planned will be
+                                    able to access and review the tools
+                                    available. They will also be able to learn
+                                    domain-specific applications and how the
+                                    tools apply to a plethora of application
+                                    problems. One of the goals of the
+                                    conference is to combine education,
+                                    engineering, and science with computing
+                                    through the medium of Python. This
+                                    conference also aims to spread the use of
+                                    Python for Scientific Computing in various
+                                    fields and among different communities.
+                                    SciPy India 2014 Organiser: FOSSEE   For
+                                    more details visit: python.fossee.in,
+                                    python.org
                                 </p>
-                                <hr>                              
+                                <hr>
+                                <p>
+                                    SciPy India 2013 Organiser: <a href="http://fossee.in" target="_blank">FOSSEE</a><br>
+                                    For more details visit: 
+                                    <a href="http://python.fossee.in" target="_blank">python.fossee.in</a>, 
+                                    <a href="http://python.org" target="_blank">python.org</a>
+                                </p>
                             </div>
                             <div class="col-md-6">
+                                <div id="dates">
+                                    <h4 class="garmond" align="center"><u>Important Dates</u></h4>
+                                    <table class="table table-bordered">
+                                        <tr>
+                                            <td>5<sup>th</sup> Nov 2014</td>
+                                            <td>Call for papers ends.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10<sup>th</sup> Nov 2014</td>
+                                            <td>Conference Registration ends.</td>
+                                        </tr>
+                                    </table>
+                                </div> <!-- /#dates -->
+                                <div class="clearfix"></div>
                                 <div id="sponsors">
-                                    <h4 class="garmond"><u>Sponsors</u></h4>
+                                    <h4 class="garmond" align="center"><u>Sponsors</u></h4>
                                     <div class="row">
-                                        <div class="col-md-4">
+                                        <div class="col-md-6">
                                             <a href="http://fossee.in/" target="_blank">
-                                            <img width="150" style="position:relative;top:25px;" src="{% static 'website/images/fossee-logo.png' %}">
+                                                <img width="150" src="{% static 'website/images/fossee-logo.png' %}">
                                             </a>
-                                        </div>
-                                        <!--div class="col-md-4">
+                                        </div> <!-- /.col -->
+                                        <div class="col-md-6">
                                             <a href="http://mhrd.gov.in/" target="_blank">
-                                            <img width="150" src="{% static 'website/images/mhrd-logo.png' %}">
-                                        </div-->
-                                     </div>
+                                                <img width="150" src="{% static 'website/images/mhrd-logo.png' %}">
+                                            </a>
+                                        </div> <!-- /.col -->
+                                    </div> <!-- /.row -->
                                 </div> <!-- /#sponsors -->
+                                <div class="clearfix"></div>
+                                <div id="previous">
+                                    <h4 class="garmond" align="center"><u>Previous Conference Websites</u></h4>
+                                    <table class="table table-bordered">
+                                        <tr>
+                                            <td><a href="http://scipy.in/2013" target="_blank">SciPy India 2013</a></td>
+                                            <td><a href="http://scipy.in/2013/schedule" target="_blank">Talks</a></td>
+                                            <td><a href="#" target="_blank">Gallery</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://scipy.in/2012" target="_blank">SciPy India 2012</a></td>
+                                            <td><a href="http://scipy.in/2012/talks/" target="_blank">Talks</a></td>
+                                            <td><a href="#" target="_blank">Gallery</a></td>
+                                        </tr>
+                                    </table>
+                                </div> <!-- /#previous -->
                             </div><!-- col-md-6 -->
                             <div class="clearfix"></div>
                         </div> <!-- /.row -->
                     </div> <!-- /#conference-->
-                    <hr> 
                 </div><!-- /.container-fluid -->
             </div> <!-- /#content -->
         </div> <!-- /#content-wrapper -->
