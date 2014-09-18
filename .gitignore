@@ -1,4 +1,5 @@
 *~
 *.pyc
-config.py
 *.swp
+config.py
+wsgi.py
