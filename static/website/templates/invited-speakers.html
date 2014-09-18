@@ -1,4 +1,5 @@
 {% extends 'website/templates/base.html' %}
+{% load static%}
 
 {% block sidebar %}
 {% endblock %}
@@ -9,9 +10,36 @@
 
 {% block content %}
 <h3>Invited Speakers</h3>
-<p>
-<em>
-    Will be updated soon.
-</em>
+<div id="sponsors">
+    <div class="row">
+        <div class="col-md-6">
+            <img width="150" src="{% static 'website/images/maciej.png' %}" style="border-radius:30px;">
+            <hr>
+            <p align="justify">
+            <a href="http://baroquesoftware.com/" traget="_blank">Maciej</a> is a freelancer working mostly on <a href="http://pypy.org/" target="_blank">PyPy</a> for the past several years. He's a core developer since 2006, working on all kinds of parts in the entire codebase including JIT, GC and assembler backends. Maciej has been going to many conferences, advertising PyPy to a broader audience for the past several years, including a <a href="http://pyvideo.org/video/266/pycon-2010--keynote--state-of-pypy" target="_blank">keynote at Pycon 2010</a>. He's also the main maintainer of jitviewer, a tool for analyzing performance of your python programs under PyPy. 
+            </p>
+            <hr>
+            <a href="https://twitter.com/fijall" target="_blank">
+                <img width="30" height="30" src="{% static 'website/images/twitter.png' %}">
+            </a>
+            <a href="https://github.com/fijal" target="_blank">
+                <img width="30" height="30" src="{% static 'website/images/git.png' %}">
+            </a>
+        </div> <!-- /.col -->
+        <div class="col-md-6">
+            <img width="150" src="{% static 'website/images/ajith.jpeg' %}" style="border-radius:30px;">
+            <hr>
+            <p align="justify">
+<b>Dr. B. P. Ajith Kumar</b>, a scientist working with the <a href="http://www.iuac.res.in/" target="_blank">IUAC</a>. His main area of work is development of instrumentation for particle accelerators and associated experiments, including radio-frequency accelerating structures, control and data acquisition systems, digital and radio frequency electronics modules. He initiated the Phoenix / <a href="http://expeyes.in/">expEYES</a> project. ExpEYES is currently the cheapest educational system to teach science.
 </p>
+            <hr>
+            <a href="http://expeyes.in/" target="_blank">
+                <img width="30" height="30" src="{% static 'website/images/exp.png' %}">
+            </a>
+            <a href="https://github.com/expeyes" target="_blank">
+                <img width="30" height="30" src="{% static 'website/images/git.png' %}">
+            </a>
+        </div> <!-- /.col -->
+    </div> <!-- /.row -->
+</div> <!-- /#sponsors -->
 {% endblock %}
