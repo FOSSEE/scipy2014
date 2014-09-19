@@ -28,16 +28,16 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li class="{% active request '^/$' %}"><a href="{% url 'website:home'%}">Home</a></li>
-                            <li><a href="{% url 'website:call_for_proposals' %}">Call for Proposals</a></li>
-                            <li><a href="{% url 'website:schedule' %}">Schedule</a></li>
-                            <li><a href="{% url 'website:invited_speakers' %}">Invited Speakers</a></li>
-                            <li><a href="{% url 'website:sponsors' %}">Sponsors</a></li>
-                            <li><a href="{% url 'website:venue' %}">Venue</a></li>
-                            <li><a href="{% url 'website:contact' %}">Contact Us</a></li-->
+                            <li class="active"><a href="{% url 'website:home'%}">Home</a></li>
+                            <li class="{% active request 'call-for-proposals' %}"><a href="{% url 'website:call_for_proposals' %}">Call for Proposals</a></li>
+                            <li class="{% active request 'schedule' %}"><a href="{% url 'website:schedule' %}">Schedule</a></li>
+                            <li class="{% active request 'invited-speakers' %}"><a href="{% url 'website:invited_speakers' %}">Invited Speakers</a></li>
+                            <li class="{% active request 'sponsors' %}"><a href="{% url 'website:sponsors' %}">Sponsors</a></li>
+                            <li class="{% active request 'venue' %}"><a href="{% url 'website:venue' %}">Venue</a></li>
+                            <li class="{% active request 'contact' %}"><a href="{% url 'website:contact' %}">Contact Us</a></li-->
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="{% url 'website:register' %}">Register</a></li>
+                            <li class="{% active request 'register' %}"><a href="{% url 'website:register' %}">Register</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
