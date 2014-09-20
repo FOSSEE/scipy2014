@@ -216,3 +216,40 @@ body {
 #twitter-widget-0 {
     height: 265px;
 }
+/* form section */
+.errorlist {
+    margin: 0;
+}
+.red-star {
+    color: tomato;
+}
+.tab-content {
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-top: none;
+}
+.well {
+    position: relative;
+    text-align: left;
+}
+.well #welcome {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.well #logout {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.well .panel {
+    margin-top: 15px;
+    -webkit-box-shadow: 0 0 10px #cccccc;
+    -moz-box-shadow: 0 0 10px #cccccc;
+    -o-box-shadow: 0 0 10px #cccccc;
+    box-shadow: 0 0 10px #cccccc;
+
+}
+#proposal-form textarea {
+    height: 100px;
+}
