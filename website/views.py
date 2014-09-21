@@ -44,7 +44,7 @@ def call_for_proposals(request, action=None):
                     data = form.save(commit=False)
                     data.user = request.user
                     data.save()
-                    return HttpResponseRedirect('/call-for-proposals')
+                    return HttpResponseRedirect('/2014/call-for-proposals')
                 else:
                     context['proposal_form'] =  form
                     context['edit'] = True
@@ -56,7 +56,7 @@ def call_for_proposals(request, action=None):
             context['edit'] = True
             return render(request, 'website/templates/call-for-proposals.html', context)
         else:
-            return HttpResponseRedirect('/call-for-proposals')
+            return HttpResponseRedirect('/2014/call-for-proposals')
         # GET
 
     """ NEW PROPOSAL SECTION """
