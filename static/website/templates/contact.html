@@ -14,7 +14,7 @@ Contact Us
 <p>Thank you for contacting us ! We will be reaching you out soon.</p>
 {% endif %}
 
-<form action="/test-contact/" method="POST" role="form">
+<form action="{% url 'website:testcontact' %}" method="POST" role="form">
 {% csrf_token %}
     <label for="user_email">Your Email</label>
     <input name="user_email" id="user_email" type="text" class="form-control">
