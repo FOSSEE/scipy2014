@@ -18,20 +18,6 @@ def venue(request):
     return render(request, 'website/templates/venue.html')
     
 def contact(request):
-    """if request.method == "POST":
-        context = {}
-        context.update(csrf(request))
-        from_email = request.POST['user_email']
-        to = ("scipy@fossee.in",)
-        subject = request.POST['subject']
-        message = request.POST['message']
-        send_mail(subject, message, from_email, to, fail_silently=False)
-        context['mailsent'] = True
-        return render(request, 'website/templates/contact.html', context)"""
-    return render(request, 'website/templates/contact.html')
-
-
-def testcontact(request):
     if request.method == "POST":
         context = {}
         context.update(csrf(request))
@@ -39,11 +25,10 @@ def testcontact(request):
         to = ("scipy@fossee.in",)
         subject = request.POST['subject']
         message = request.POST['message']
-        send_mail(subject, message, from_email, to, fail_silently=False)
+        send_mail(subject, message, from_email, to, fail_silently=True)
         context['mailsent'] = True
         return render(request, 'website/templates/contact.html', context)
     return render(request, 'website/templates/contact.html')
-
 
 
 def register(request):

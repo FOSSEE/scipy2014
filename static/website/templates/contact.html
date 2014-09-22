@@ -5,16 +5,13 @@ Contact Us
 {% endblock %}
 
 {% block content %}
-<h3>Contact Us</h3>
-<hr>
-
 <p>Feel free to drop us a message regarding any of your queries.</p>
 
 {% if mailsent %}
 <p>Thank you for contacting us ! We will be reaching you out soon.</p>
 {% endif %}
 
-<form action="{% url 'website:testcontact' %}" method="POST" role="form">
+<form action="{% url 'website:contact' %}" method="POST" role="form">
 {% csrf_token %}
     <label for="user_email">Your Email</label>
     <input name="user_email" id="user_email" type="text" class="form-control">
