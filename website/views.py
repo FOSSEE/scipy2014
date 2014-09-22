@@ -3,6 +3,7 @@ from django.core.context_processors import csrf
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render
 from django.template import RequestContext
+from django.core.mail import send_mail
 
 from website.forms import UserLoginForm, UserRegisterForm, ProposalForm
 from website.models import Proposal
@@ -17,7 +18,33 @@ def venue(request):
     return render(request, 'website/templates/venue.html')
     
 def contact(request):
+    """if request.method == "POST":
+        context = {}
+        context.update(csrf(request))
+        from_email = request.POST['user_email']
+        to = ("scipy@fossee.in",)
+        subject = request.POST['subject']
+        message = request.POST['message']
+        send_mail(subject, message, from_email, to, fail_silently=False)
+        context['mailsent'] = True
+        return render(request, 'website/templates/contact.html', context)"""
     return render(request, 'website/templates/contact.html')
+
+
+def testcontact(request):
+    if request.method == "POST":
+        context = {}
+        context.update(csrf(request))
+        from_email = request.POST['user_email']
+        to = ("scipy@fossee.in",)
+        subject = request.POST['subject']
+        message = request.POST['message']
+        send_mail(subject, message, from_email, to, fail_silently=False)
+        context['mailsent'] = True
+        return render(request, 'website/templates/contact.html', context)
+    return render(request, 'website/templates/contact.html')
+
+
 
 def register(request):
     return render(request, 'website/templates/register.html')
