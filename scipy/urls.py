@@ -11,5 +11,5 @@ urlpatterns = patterns('',
     url(dajaxice_config.dajaxice_url, include('dajaxice.urls')),
 
     # For devel
-    # url(r'^2014/', include('website.urls', namespace='website')),
+    url(r'^2014/', include('website.urls', namespace='website')),
 )
