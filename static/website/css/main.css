@@ -10,7 +10,7 @@ body {
     background-image: url('../images/ecailles.png');
 }
 #page-wrapper {
-    width: 960px;
+    max-width: 960px;
     margin: 25px auto 10px;
     padding: 0 0 35px 0;
     background: #ffffff;
