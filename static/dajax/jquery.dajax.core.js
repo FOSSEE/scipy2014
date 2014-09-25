@@ -46,7 +46,7 @@ var Dajax = {
             break;
 
             case 'red':
-                window.setTimeout('window.location="/2014/'+elem.url+'";',elem.delay);
+                window.setTimeout('window.location="'+aliasUrl+elem.url+'";',elem.delay);
             break;
 
             case 'js':
