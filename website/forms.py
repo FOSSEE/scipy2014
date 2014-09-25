@@ -45,6 +45,7 @@ class UserRegisterForm(UserCreationForm):
     def clean_email(self):
         email = self.cleaned_data.get('email', None)
         validate_email(email)
+        return email
 
     def clean_username(self):
         username = self.cleaned_data.get('username', '')
