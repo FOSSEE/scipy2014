@@ -9,37 +9,84 @@
 {% endblock %}
 
 {% block content %}
-<h3>Invited Speakers</h3>
-<div id="sponsors">
+<div id="invited-speakers">
     <div class="row">
-        <div class="col-md-6">
-            <img width="150" src="{% static 'website/images/maciej.png' %}" style="border-radius:30px;">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="media">
+                <a class="pull-left" href="#">
+                    <img class="media-object" src="{% static 'website/images/maciej.jpg'%}" alt="Maciej Fijałkowski">
+                </a>
+                <div class="media-body">
+                    <h4 class="media-heading">Maciej Fijałkowski</h4>
+                    <p align="justify">
+                        Maciej Fijałkowski is a freelancer working mostly on
+                        <a href="http://pypy.org/" target="_blank">PyPy</a> for the
+                        past several years. He's a core developer since 2006,
+                        working on all kinds of parts in the entire codebase
+                        including JIT, GC and assembler backends. Maciej has
+                        been going to many conferences, advertising PyPy to a
+                        broader audience for the past several years, including
+                        a <a href="http://pyvideo.org/video/266/pycon-2010--keynote--state-of-pypy" target="_blank">keynote at Pycon 2010</a>.
+                        He's also the main maintainer of jitviewer, a tool for
+                        analyzing performance of your python programs under
+                        PyPy. 
+                    </p>
+                    <p>
+                        <em>Links:</em>
+                        <a href="http://baroquesoftware.com/" target="_blank"><span class="label label-primary">Website</span></a>
+                        <a href="https://github.com/fijal" target="_blank"><span class="label label-default">Github</span></a>
+                        <a href="https://twitter.com/fijall" target="_blank"><span class="label label-info">Twitter</span></a>
+                    </p>
+                </div>
+            </div> <!-- /.media -->
             <hr>
-            <p align="justify">
-            <a href="http://baroquesoftware.com/" traget="_blank">Maciej</a> is a freelancer working mostly on <a href="http://pypy.org/" target="_blank">PyPy</a> for the past several years. He's a core developer since 2006, working on all kinds of parts in the entire codebase including JIT, GC and assembler backends. Maciej has been going to many conferences, advertising PyPy to a broader audience for the past several years, including a <a href="http://pyvideo.org/video/266/pycon-2010--keynote--state-of-pypy" target="_blank">keynote at Pycon 2010</a>. He's also the main maintainer of jitviewer, a tool for analyzing performance of your python programs under PyPy. 
-            </p>
+            <div class="media">
+                <a class="pull-left" href="#">
+                    <img class="media-object" src="{% static 'website/images/ajith.jpg'%}" alt="Ajith Kumar">
+                </a>
+                <div class="media-body">
+                    <h4 class="media-heading">Ajith Kumar</h4>
+                    <p align="justify">
+                        Dr. B. P. Ajith Kumar, a scientist working with the
+                        <a href="http://www.iuac.res.in/" target="_blank">IUAC</a>.
+                        His main area of work is development of
+                        instrumentation for particle accelerators and associated
+                        experiments, including radio-frequency accelerating
+                        structures, control and data acquisition systems, digital
+                        and radio frequency electronics modules. He initiated the
+                        Phoenix / <a href="http://expeyes.in/" target="_blank">expEYES</a>
+                        project. ExpEYES is currently the cheapest educational
+                        system to teach science.
+                    </p>
+                    <p>
+                        <em>Links:</em>
+                        <a href="http://expeyes.in" target="_blank"><span class="label label-primary">Website</span></a>
+                    </p>
+                </div>
+            </div> <!-- /.media -->
             <hr>
-            <a href="https://twitter.com/fijall" target="_blank">
-                <img width="30" height="30" src="{% static 'website/images/twitter.png' %}">
-            </a>
-            <a href="https://github.com/fijal" target="_blank">
-                <img width="30" height="30" src="{% static 'website/images/git.png' %}">
-            </a>
+            <div class="media">
+                <a class="pull-left" href="#">
+                    <img class="media-object" src="{% static 'website/images/romain.jpg'%}" alt="Romain Guillebert">
+                </a>
+                <div class="media-body">
+                    <h4 class="media-heading">Romain Guillebert</h4>
+                    <p align="justify">
+                        Romain Guillebert holds a Bachelor of Science in Software
+                        Development at IT Carlow (Ireland).  In 2010 he worked as a
+                        software engineering intern at EDF Le Havre, he
+                        participated in the 2011 Google Summer of Code on the PyPy
+                        project.  At the médialab he is responsible of the software
+                        side of the Trust project where he works on the analysis of
+                        social behaviors in open-source communities.
+                    </p>
+                    <p>
+                        <em>Links:</em>
+                        <a href="https://twitter.com/rguillebert" target="_blank"><span class="label label-info">Twitter</span></a>
+                    </p>
+                </div>
+            </div> <!-- /.media -->
         </div> <!-- /.col -->
-        <div class="col-md-6">
-            <img width="150" src="{% static 'website/images/ajith.jpeg' %}" style="border-radius:30px;">
-            <hr>
-            <p align="justify">
-<b>Dr. B. P. Ajith Kumar</b>, a scientist working with the <a href="http://www.iuac.res.in/" target="_blank">IUAC</a>. His main area of work is development of instrumentation for particle accelerators and associated experiments, including radio-frequency accelerating structures, control and data acquisition systems, digital and radio frequency electronics modules. He initiated the Phoenix / <a href="http://expeyes.in/">expEYES</a> project. ExpEYES is currently the cheapest educational system to teach science.
-</p>
-            <hr>
-            <a href="http://expeyes.in/" target="_blank">
-                <img width="30" height="30" src="{% static 'website/images/exp.png' %}">
-            </a>
-            <a href="https://github.com/expeyes" target="_blank">
-                <img width="30" height="30" src="{% static 'website/images/git.png' %}">
-            </a>
-        </div> <!-- /.col -->
-    </div> <!-- /.row -->
-</div> <!-- /#sponsors -->
+    </div><!-- /.row -->
+</div> <!-- /#invited-speakers -->
 {% endblock %}

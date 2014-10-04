@@ -199,19 +199,8 @@ body {
 #speakers .extras .bio {
     border-right: 1px solid #eeeeee;
 }
-#sponsors {
-    padding: 10px 15px 20px;
-    margin: 10px 0 10px 0;
-    text-align: center;
-    background: #fafafa;
-    border: 1px solid #cccccc;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -o-border-radius: 5px;
-    border-radius: 5px;
-}
-#sponsors img {
-    margin-top: 10px;
+#invited-speakers .media img {
+    width: 150px;
 }
 #twitter-widget-0 {
     height: 250px;
