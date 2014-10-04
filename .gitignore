@@ -4,3 +4,4 @@
 config.py
 wsgi.py
 static/uploads
+static/CACHE

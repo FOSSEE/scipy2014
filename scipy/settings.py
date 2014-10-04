@@ -85,8 +85,10 @@ STATICFILES_DIRS = (
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    # 'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    # Contrib finders.
     'dajaxice.finders.DajaxiceFinder',
+    'compressor.finders.CompressorFinder',
 )
 
 # Make this unique, and don't share it with anybody.
@@ -107,6 +109,9 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # Contrib middlewares.
+    'htmlmin.middleware.HtmlMinifyMiddleware',
+    'htmlmin.middleware.MarkRequestMiddleware',
 )
 
 ROOT_URLCONF = 'scipy.urls'
@@ -138,9 +143,12 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    # Contrib apps.
     'widget_tweaks',
     'dajaxice',
     'dajax',
+    'compressor',
+    # Custom apps.
     'website',
 )
 
@@ -172,3 +180,10 @@ LOGGING = {
         },
     }
 }
+COMPRESS_ROOT = os.path.join(BASE_DIR, 'static')
+COMPRESS_ENABLED = True
+HTML_MINIFY = True
+COMPRESS_CSS_FILTERS = [
+    'compressor.filters.cssmin.CSSMinFilter'
+]
+

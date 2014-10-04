@@ -7,7 +7,6 @@
 }
 body {
     background-color: #f3f1ea;
-    background-image: url('../images/ecailles.png');
 }
 #page-wrapper {
     max-width: 960px;
@@ -42,7 +41,6 @@ body {
 }
 #header{
     height: 300px;
-    background: url("../images/jumbo_bg.jpg");
     background-attachment: fixed;
     color: #ffffff;
 }
@@ -132,7 +130,6 @@ body {
 }
 #page-header {
     height: 100px;
-    background: url("../images/jumbo_bg.jpg");
     background-attachment: fixed;
     color: #ffffff;
 }
