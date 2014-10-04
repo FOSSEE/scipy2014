@@ -196,6 +196,20 @@ body {
 #speakers .extras .bio {
     border-right: 1px solid #eeeeee;
 }
+#sponsors {
+    padding: 10px 15px 20px;
+    margin: 10px 0 10px 0;
+    text-align: center;
+    background: #fafafa;
+    border: 1px solid #cccccc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+}
+#sponsors img {
+    margin-top: 10px;
+}
 #invited-speakers .media img {
     width: 150px;
 }
