@@ -210,6 +210,10 @@ body {
 #sponsors img {
     margin-top: 10px;
 }
+#sponsorship-details .media img {
+    width: 150px;
+    margin-top: 25px;
+}
 #invited-speakers .media img {
     width: 150px;
 }
