@@ -5,6 +5,9 @@
 .garmond {
     font-family: 'EB Garamond', serif;
 }
+sup {
+    margin-right: 5px;
+}
 body {
     background-color: #f3f1ea;
 }

@@ -21,6 +21,9 @@ $('#sidebar .nav-group').affix({
   }
 });
 
+$('.descp').tooltip();
+$(".descp").click(function(e) { e.preventDefault();});
+
 $("body").scrollspy({
     target: '#sidebar',
     offset: 30
