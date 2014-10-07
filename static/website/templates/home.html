@@ -70,14 +70,14 @@
                 <div class="container-fluid">
                     <div id="speakers">
                         <div class="row">
-                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <h4 class="garmond" align="center"><u>Speakers</u></h4>
                                 <div class="row">
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                         <div class="thumbnail">
                                             <img src="{% static 'website/images/maciej.jpg' %}">
                                             <div class="caption">
-                                                Maciej Fijałkowski
+                                                Maciej Fijałkowski <span class="garmond">(Keynote)</span>
                                                 <hr>
                                                 <div class="extras garmond">
                                                     <div class="row">
@@ -96,7 +96,7 @@
                                         <div class="thumbnail">
                                             <img src="{% static 'website/images/ajith.jpg' %}">
                                             <div class="caption">
-                                                Ajith Kumar 
+                                                Ajith Kumar <span class="garmond">(Keynote)</span>
                                                 <hr>
                                                 <div class="extras garmond">
                                                     <div class="row">
@@ -115,7 +115,7 @@
                                         <div class="thumbnail">
                                             <img src="{% static 'website/images/romain.jpg' %}">
                                             <div class="caption">
-                                                Romain Guillebert
+                                                Romain Guillebert <span class="garmond">(Invited)</span>
                                                 <hr>
                                                 <div class="extras garmond">
                                                     <div class="row">
@@ -132,12 +132,6 @@
                                     </div> <!-- /.col -->
                                 </div> <!-- /.row -->
                             </div> <!-- /.col -->
-                            
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                                <h4 class="garmond" align="center"><u>News and Updates</u></h4>
-                                <a class="twitter-timeline"  href="https://twitter.com/SciPyIndia" data-widget-id="404921110312910848">Tweets by @SciPyIndia</a>
-                                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                            </div><!-- /.col -->
                         </div> <!-- /.row -->
                     </div> <!-- /#speakers -->
                     <hr> 
@@ -169,14 +163,17 @@
                                     Python for Scientific Computing in various
                                     fields and among different communities.
                                 </p>
-                                <hr>
-                                <p>
-                                    SciPy India 2014 Organiser: <a href="http://fossee.in" target="_blank">FOSSEE</a><br>
-                                    For more details visit: 
-                                    <a href="http://python.fossee.in" target="_blank">python.fossee.in</a>, 
-                                    <a href="http://python.org" target="_blank">python.org</a>
-                                </p>
-                            </div>
+                            </div> <!-- /.col -->
+                            
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <h4 class="garmond" align="center"><u>News and Updates</u></h4>
+                                {% include 'website/templates/twitter-timeline.html' %}
+                                <div class="clearfix"></div>
+                            </div><!-- /.col -->
+                            <div class="clearfix"></div>
+                        </div> <!-- /.row -->
+
+                        <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                 <div id="dates">
                                     <h4 class="garmond" align="center"><u>Important Dates</u></h4>
@@ -191,6 +188,34 @@
                                         </tr>
                                     </table>
                                 </div> <!-- /#dates -->
+                                <hr>
+                                <p>
+                                SciPy India 2014 Organiser: <a href="http://fossee.in" target="_blank">FOSSEE</a><br>
+                                For more details visit: 
+                                <a href="http://python.fossee.in" target="_blank">python.fossee.in</a>, 
+                                <a href="http://python.org" target="_blank">python.org</a>
+                                </p>
+                                <p>
+                                    <u class="garmond">Registration for the conference is now open.</u><br><br>
+                                    <a href='http://scipyindia2014.doattend.com'><img src='http://doattend.com/assets/btnw-reg-now.png'/></a>
+                                </p>
+                            </div> <!-- /.col -->
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <div id="previous">
+                                    <h4 class="garmond" align="center"><u>Previous Conference Websites</u></h4>
+                                    <table class="table table-bordered">
+                                        <tr>
+                                            <td><a href="http://scipy.in/2013" target="_blank">SciPy India 2013</a></td>
+                                            <td><a href="http://scipy.in/2013/schedule" target="_blank">Talks</a></td>
+                                            <td><a href="https://plus.google.com/photos/+ScipyIndia/albums/5958662267241508465" target="_blank">Gallery</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="http://scipy.in/2012" target="_blank">SciPy India 2012</a></td>
+                                            <td><a href="http://scipy.in/2012/talks/" target="_blank">Talks</a></td>
+                                            <td><a href="https://plus.google.com/photos/+HardikGhaghada/albums/5830648864137819041" target="_blank">Gallery</a></td>
+                                        </tr>
+                                    </table>
+                                </div> <!-- /#previous -->
                                 <div class="clearfix"></div>
                                 <div id="sponsors">
                                     <h4 class="garmond" align="center"><u>Sponsors</u></h4>
@@ -207,23 +232,7 @@
                                         </div> <!-- /.col -->
                                     </div> <!-- /.row -->
                                 </div> <!-- /#sponsors -->
-                                <div class="clearfix"></div>
-                                <div id="previous">
-                                    <h4 class="garmond" align="center"><u>Previous Conference Websites</u></h4>
-                                    <table class="table table-bordered">
-                                        <tr>
-                                            <td><a href="http://scipy.in/2013" target="_blank">SciPy India 2013</a></td>
-                                            <td><a href="http://scipy.in/2013/schedule" target="_blank">Talks</a></td>
-                                            <td><a href="https://plus.google.com/photos/+ScipyIndia/albums/5958662267241508465" target="_blank">Gallery</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="http://scipy.in/2012" target="_blank">SciPy India 2012</a></td>
-                                            <td><a href="http://scipy.in/2012/talks/" target="_blank">Talks</a></td>
-                                            <td><a href="https://plus.google.com/photos/+HardikGhaghada/albums/5830648864137819041" target="_blank">Gallery</a></td>
-                                        </tr>
-                                    </table>
-                                </div> <!-- /#previous -->
-                            </div><!-- /.col -->
+                            </div> <!-- /.col -->
                             <div class="clearfix"></div>
                         </div> <!-- /.row -->
                     </div> <!-- /#conference-->
