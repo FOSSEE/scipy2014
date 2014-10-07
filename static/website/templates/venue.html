@@ -1,4 +1,5 @@
 {% extends 'website/templates/base.html' %}
+{% load static %}
 
 {% block sidebar %}
 {% endblock %}
@@ -8,9 +9,59 @@ Venue
 {% endblock %}
 
 {% block content %}
-<h3>Venue - IIT Bombay</h3>
-<hr>
-<div>
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d942.3681463328357!2d72.916895!3d19.130779999999998!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c7f4215f57bf%3A0xcf0c03ea45a113e1!2sLecture+Hall+Complex+(LHC)!5e0!3m2!1sen!2sin!4v1410350543516" width="930" height="450" frameborder="0" style="border:0"></iframe>
-</div>
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <h3 class="garmond"><em>Venue</em>: IIT Bombay, Powai, India.</h3>
+        <p>
+            <em> Links: </em>
+            <a href="http://www.iitb.ac.in" target="_blank"><span class="label label-primary">IITB Website</span></a>
+            <a href="{% static 'data/iitb_map.pdf' %}" target="_blank"><span class="label label-success">IITB Map</span></a>
+        </p>
+        <hr>
+        <h3 class="garmond">A quick guide on reaching IITB campus.</h3>
+        <p>
+            <ul>
+                <li>Powai is an eastern suburb in North-Eastern part of Mumbai. </li>
+                <li>Here is how you can reach IIT Bombay from various important stations.</li>
+            </ul>
+        </p> <br>
+    </div> <!-- /.col -->
+</div> <!-- /.row -->
+<div id="reach-iitb"> 
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <ul class="nav nav-pills nav-stacked text-left side-nav">
+                <li class="active"><a id="airport" href="#"><small>From Airport</small></a></li>
+                <li><a id="dadar" href="#"><small>From Dadar Station</small></a></li>
+                <li><a id="thane" href="#"><small>From Thane Station</small></a></li>
+                <li><a id="bandra" href="#"><small>From Bandra Terminus</small></a></li>
+                <li><a id="tilak" href="#"><small>From Lokmanya Tilak Terminus</small></a></li>
+                <li><a id="central" href="#"><small>From Mumbai Central</small></a></li>
+                <li><a id="shivaji" href="#"><small>From Chatrapati Shivaji Terminus</small></a></li>
+                <li id="fare">
+                <h6>Transit Details: <span id="from">From Airport</span></h6>
+                <p id="description">
+                Convenient way to reach IITB from airport is to BEST buses running on route no. 382 or 409.
+                Alternatively you may take an auto directly to IIT which would cost you around 90 rs.
+                (depending on traffic) or a taxi which would cost around 100 Rs.
+                </p>
+                </li>
+            </ul>
+        </div> <!-- /.col -->
+        
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+            <div id="map">
+                <img id="map-loader" src="{% static 'website/images/map-loader.gif' %}">
+                <div id="mappy">
+                    <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.co.in/maps?f=d&amp;source=s_d&amp;saddr=Chhatrapati+Shivaji+International+Airport,+Andheri+East,+Mumbai,+Maharashtra&amp;daddr=IIT+Main+Gate&amp;hl=en&amp;geocode=FQFLIwEdg-NXBCGuqHTEYBrMHilHKb2ZUMjnOzGuqHTEYBrMHg%3BFRrUIwEdep5YBCldyp4n8sfnOzFZy8ueURQugA&amp;aq=4&amp;oq=IIT&amp;sll=19.099667,72.883154&amp;sspn=0.094407,0.154324&amp;mra=pd&amp;ie=UTF8&amp;t=m&amp;ll=19.110379,72.895527&amp;spn=0.029763,0.042183&amp;output=embed">
+                    </iframe>
+                </div>
+            </div> <!-- /map -->
+        </div> <!-- /.col -->
+    </div> <!-- /.row -->
+</div> <!--/#reach-iitb -->
+{% endblock %}
+
+{% block javascript %}
+<script src="{% static 'website/js/venue.js'%}"></script>
 {% endblock %}

@@ -257,3 +257,54 @@ body {
 #proposal-form textarea {
     height: 100px;
 }
+
+/* venue css */
+#reach-iitb{
+  height: 400px;
+  margin-bottom: 25px;
+}
+#reach-iitb .side-nav{
+  height: 455px;
+  overflow: hidden;
+  background: #ffffff;
+}
+#reach-iitb .nav-pills>li>a {
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+         -o-border-radius: 0;
+            border-radius: 0;
+} 
+#reach-iitb #fare{
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding:5px;
+  height: 150px;
+  margin-top: 15px;
+  font-size: .8em;
+  background: #f5f5f5;
+  text-align: justify;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+       -o-border-radius: 5px;
+          border-radius: 5px;
+}
+#reach-iitb #map{
+  height: 455px;
+  padding: 0;
+  background: #ffffff;
+  border: 1px solid #f5f5f5;
+}
+#map-loader{
+    display: block;
+    margin: 220px auto 0;
+}
+#map {
+    position: relative;
+}
+#mappy{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
