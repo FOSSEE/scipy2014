@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.template import RequestContext
 from django.core.mail import send_mail
 
-from website.forms import UserLoginForm, UserRegisterForm, ProposalForm
+from website.forms import UserLoginForm, UserRegisterForm, ProposalForm, ContactUsForm
 from website.models import Proposal
 
 def home(request):
@@ -18,17 +18,24 @@ def venue(request):
     return render(request, 'website/templates/venue.html')
     
 def contact(request):
+    context = {}
     if request.method == "POST":
-        context = {}
-        context.update(csrf(request))
-        from_email = request.POST['user_email']
-        to = ("scipy@fossee.in",)
-        subject = request.POST['subject']
-        message = request.POST['message']
-        send_mail(subject, message, from_email, to, fail_silently=True)
-        context['mailsent'] = True
-        return render(request, 'website/templates/contact.html', context)
-    return render(request, 'website/templates/contact.html')
+        form = ContactUsForm(request.POST)
+        if form.is_valid():
+            form = form.cleaned_data
+            from_email = form['useremail']
+            to = ('scipy@fossee.in',)
+            subject = form['subject'] + "-" + form['username']
+            message = form['message']
+            send_mail(subject, message, from_email, to, fail_silently=True)
+            context['mailsent'] = True
+            return render(request, 'website/templates/contact.html', context)
+        else:
+            context['form'] = form
+            return render(request, 'website/templates/contact.html', context)
+    form = ContactUsForm()
+    context['form'] = form
+    return render(request, 'website/templates/contact.html', context)
 
 
 def register(request):

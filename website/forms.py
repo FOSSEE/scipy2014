@@ -68,3 +68,15 @@ class ProposalForm(forms.ModelForm):
             elif attachment.size > (5*1024*1024):
                 raise forms.ValidationError('File size exceeds 5MB')
         return attachment
+
+class ContactUsForm(forms.Form):
+    useremail = forms.EmailField()
+    username = forms.CharField()
+    subject = forms.CharField()
+    message = forms.CharField(widget=forms.Textarea(attrs={'cols': 75, 'rows': 4}))
+
+
+    def clean_useremail(self):
+        useremail = self.cleaned_data.get('useremail')
+        validate_email(useremail)
+        return useremail

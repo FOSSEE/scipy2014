@@ -1,26 +1,45 @@
 {% extends 'website/templates/base.html' %}
 
+{% load widget_tweaks %}
+
 {% block current %}
 Contact Us
 {% endblock %}
 
 {% block content %}
-<p>Feel free to drop us a message regarding any of your queries.</p>
 
 {% if mailsent %}
 <p>Thank you for contacting us ! We will be reaching you out soon.</p>
-{% endif %}
 
-<form action="{% url 'website:contact' %}" method="POST" role="form">
-{% csrf_token %}
-    <label for="user_email">Your Email</label>
-    <input name="user_email" id="user_email" type="text" class="form-control">
-    <label for="user_name">Your Name</label>
-    <input name="user_name" id="user_name" type="text" class="form-control">
-    <label for="subject">Subject</label>
-    <input name="subject" id="subject" type="text" class="form-control">
-    <label for="message">Your Message</label><br>
-    <textarea name="message" rows="4" cols="75"></textarea>
-    <br><input class="btn btn-default" type="submit" value="Send"> 
-</form>
+{% else %}
+<p>Feel free to drop us a message regarding any of your queries.</p>
+<div class="row">
+    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+        <form id="contact" action="{% url 'website:contact' %}" method="POST" role="form">{% csrf_token %}
+            <div class="form-group">
+                <label for="id_username">Name:</label>
+                {% render_field form.username class+='form-control' %}
+                {{ form.username.errors }}
+            </div>
+            <div class="form-group">
+                <label for="id_useremail">Email:</label>
+                {% render_field form.useremail class+='form-control' %}
+                {{ form.useremail.errors }}
+            </div>
+            <div class="form-group">
+                <label for="id_subject">Subject:</label>
+                {% render_field form.subject class+='form-control' %}
+                {{ form.subject.errors }}
+            </div>
+            <div class="form-group">
+                <label for="id_message">Message:</label>
+                {% render_field form.message class+='form-control' %}
+                {{ form.message.errors }}
+            </div>
+            <input class="btn btn-primary" type="submit" value="Submit">
+            </form>
+    </div> <!-- /.col -->
+</div> <!-- /.row -->
+
+{% endif %}
 {% endblock %}
