@@ -1,5 +1,13 @@
 {% extends 'website/templates/base.html' %}
 
+{% load static %}
+
 {% block content %}
-    <h3 class="garmond">Will be updated soon...</h3>
+    <p class="lead">
+    <a class="btn btn-primary" href="{% static 'data/scipy2014_poster.pdf' %}" download>Download <span class="glyphicon glyphicon-download"></span></a>
+        the printable version of the poster.
+    </p>
+    <center>
+        <img src="{% static 'website/images/scipy2014_poster_x800.jpg' %}" style="width:100%;">
+    </center>
 {% endblock %}
