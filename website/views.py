@@ -102,3 +102,6 @@ def call_for_proposals(request, action=None):
         context['register_form'] = UserRegisterForm()
     context.update(csrf(request))
     return render(request, 'website/templates/call-for-proposals.html', context)
+
+def poster(request):
+    return render(request, 'website/templates/poster.html')
