@@ -266,8 +266,8 @@ body {
   height: 400px;
   margin-bottom: 25px;
 }
-#reach-iitb .side-nav{
-  height: 455px;
+#reach-iitb .side-nav {
+  height: 475px;
   overflow: hidden;
   background: #ffffff;
 }
@@ -277,7 +277,7 @@ body {
          -o-border-radius: 0;
             border-radius: 0;
 } 
-#reach-iitb #fare{
+#reach-iitb #fare {
   overflow-x: hidden;
   overflow-y: scroll;
   padding:5px;
@@ -291,23 +291,27 @@ body {
        -o-border-radius: 5px;
           border-radius: 5px;
 }
-#reach-iitb #map{
+#reach-iitb #map {
   height: 455px;
   padding: 0;
   background: #ffffff;
   border: 1px solid #f5f5f5;
 }
-#map-loader{
+#map-loader {
     display: block;
     margin: 220px auto 0;
 }
 #map {
     position: relative;
 }
-#mappy{
+#mappy {
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
+}
+.num {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
 }
