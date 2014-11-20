@@ -12,6 +12,7 @@ urlpatterns = patterns('',
     url(r'^register/$', 'website.views.register', name='register'),
     url(r'^invited-speakers/$', 'website.views.invited_speakers', name='invited_speakers'),
     url(r'^call-for-proposals/$', 'website.views.call_for_proposals', name='call_for_proposals'),
+    url(r'^cfp-view-abstracts/$', 'website.views.view_abstracts', name='view_abstracts'),
     url(r'^call-for-proposals/(?P<action>[^/]+)$', 'website.views.call_for_proposals', name='call_for_proposals'),
     url(r'^poster/$', 'website.views.poster', name='poster'),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

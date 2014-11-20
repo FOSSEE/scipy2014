@@ -1,0 +1,52 @@
+{% extends 'website/templates/base.html' %}
+
+{% load widget_tweaks %}
+
+{% block current %}
+View Abstracts
+{% endblock %}
+
+
+{% block content %}
+    {% for proposal in proposals %}
+        <p><b>Title: </b>&nbsp;{{ proposal.title }}</p>
+        <p><b>Speaker: </b>&nbsp;{{ proposal.user.first_name }} {{ proposal.user.last_name }}</p>
+        <p><b>Bio: </b>&nbsp;{{ proposal.bio }}</p>
+        <p><b>Objective: </b>&nbsp;{{ proposal.objective }}</p>
+        <div class="modal fade" id="abstract" tabindex="-1" role="dialog" aria-labelledby="abstractLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="abstractLabel">Abstract</h4>
+              </div>
+              <div class="modal-body">
+                {{ proposal.abstract }}
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <table>
+            <tr>
+               <td width=100>
+                <button type="button" class="btn btn-mini" data-toggle="modal" data-target="#abstract">
+                    Abstract
+                </button>
+               </td>
+               <td>
+                <a href="{{ proposal.attachment.url }}" class="btn btn-info" target="_blank">Attachment</a>
+               </td>
+            </tr>
+        </table>
+        <br>
+        {% if proposal.link %}
+            <p><b>Additional Links: </b>&nbsp;<a href="http://{{ proposal.link }}" target="_blank">{{ proposal.link }}</a></p>
+        {% endif %}
+
+        <hr>
+    {% endfor %}
+{% endblock %}
+

@@ -92,6 +92,9 @@ def call_for_proposals(request, action=None):
                 return render(request, 'website/templates/call-for-proposals.html', context)
     # GET
     if request.user.is_authenticated():
+        user = request.user
+        if user.username == "fossee":
+            return HttpResponseRedirect('/2014/cfp-view-abstracts')
         # Checking whether proposal exists
         if Proposal.objects.filter(user=request.user).exists():
             context['proposal'] = Proposal.objects.get(user=request.user)
@@ -102,6 +105,18 @@ def call_for_proposals(request, action=None):
         context['register_form'] = UserRegisterForm()
     context.update(csrf(request))
     return render(request, 'website/templates/call-for-proposals.html', context)
+
+
+def view_abstracts(request):
+    user = request.user
+    context = {}
+    if user.is_authenticated():
+        if user.username == "fossee":
+            proposals = Proposal.objects.all()
+            context['proposals'] = proposals
+            context['user'] = user
+            return render(request, 'website/templates/view-abstracts.html', context)
+
 
 def poster(request):
     return render(request, 'website/templates/poster.html')
