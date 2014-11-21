@@ -8,6 +8,9 @@ Proposal Details
 
 
 {% block content %}
+        <a style="float:right;" href="{% url 'website:UserLogout' %}" class="btn btn-info">Logout</a>
+        <br>
+        <br>
         <p><b>Title: </b>&nbsp;{{ proposal.title }}</p>
         <p><b>Speaker: </b>&nbsp;{{ proposal.user.first_name }} {{ proposal.user.last_name }}</p>
         <p><b>Bio: </b>&nbsp;{{ proposal.bio }}</p>

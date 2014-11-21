@@ -1,6 +1,7 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.core.context_processors import csrf
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth import authenticate, logout
 from django.shortcuts import render
 from django.template import RequestContext
 from django.core.mail import send_mail
@@ -49,6 +50,12 @@ def sponsors(request):
 
 def invited_speakers(request):
     return render(request, 'website/templates/invited-speakers.html')
+
+def UserLogout(request):
+    user = request.user
+    if user.is_authenticated() and user.is_active:
+        logout(request)
+    return HttpResponseRedirect('/')
 
 def call_for_proposals(request, action=None):
     context = {}
