@@ -14,3 +14,9 @@ class Proposal(models.Model):
     attachment = models.FileField(upload_to=get_document_dir)
     date_created = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField(auto_now=True)
+    
+    
+class Comments(models.Model):
+    proposal = models.ForeignKey(Proposal)
+    user = models.ForeignKey(User)
+    comment = models.CharField(max_length=700)

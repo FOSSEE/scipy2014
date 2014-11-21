@@ -6,7 +6,7 @@ from django.template import RequestContext
 from django.core.mail import send_mail
 
 from website.forms import UserLoginForm, UserRegisterForm, ProposalForm, ContactUsForm
-from website.models import Proposal
+from website.models import Proposal, Comments
 
 def home(request):
     return render(request, 'website/templates/home.html')
@@ -116,6 +116,37 @@ def view_abstracts(request):
             context['proposals'] = proposals
             context['user'] = user
             return render(request, 'website/templates/view-abstracts.html', context)
+        else:
+            return render(request, 'website/templates/prohibited.html')
+    else:
+        return render(request, 'website/templates/prohibited.html')
+
+
+def abstract_details(request, proposal_id=None):
+    user = request.user
+    context = {}
+    if user.is_authenticated():
+        if user.username == "fossee":
+            proposal = Proposal.objects.get(id=proposal_id)
+            if request.method == 'POST':
+                comment = Comments()
+                comment.comment = request.POST['comment']
+                comment.user = user
+                comment.proposal = proposal
+                comment.save()
+                comments = Comments.objects.filter(proposal=proposal)
+                context['proposal'] = proposal
+                context['comments'] = comments
+                context.update(csrf(request))
+                return render(request, 'website/templates/abstract-details.html', context)
+            comments = Comments.objects.filter(proposal=proposal)
+            context['proposal'] = proposal
+            context['comments'] = comments
+            return render(request, 'website/templates/abstract-details.html', context)
+        else:
+            return render(request, 'website/templates/prohibited.html')
+    else:
+        return render(request, 'website/templates/prohibited.html')
 
 
 def poster(request):
