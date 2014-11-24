@@ -100,7 +100,7 @@ def call_for_proposals(request, action=None):
     # GET
     if request.user.is_authenticated():
         user = request.user
-        if user.username == "fossee":
+        if user.groups.filter(name='moderator').exists():
             return HttpResponseRedirect('/2014/cfp-view-abstracts')
         # Checking whether proposal exists
         if Proposal.objects.filter(user=request.user).exists():
@@ -118,7 +118,7 @@ def view_abstracts(request):
     user = request.user
     context = {}
     if user.is_authenticated():
-        if user.username == "fossee":
+        if user.groups.filter(name='moderator').exists():
             proposals = Proposal.objects.all()
             context['proposals'] = proposals
             context['user'] = user
@@ -133,7 +133,7 @@ def abstract_details(request, proposal_id=None):
     user = request.user
     context = {}
     if user.is_authenticated():
-        if user.username == "fossee":
+        if user.groups.filter(name='moderator').exists():
             proposal = Proposal.objects.get(id=proposal_id)
             if request.method == 'POST':
                 comment = Comments()
