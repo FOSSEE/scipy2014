@@ -2,6 +2,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from dajaxice.core import dajaxice_autodiscover, dajaxice_config
 dajaxice_autodiscover()
+admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^', include('website.urls', namespace='website')),
