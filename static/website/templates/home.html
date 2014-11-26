@@ -49,6 +49,7 @@
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li class="{% active request 'register' %}"><a href="{% url 'website:register' %}">Register</a></li>
+                            <li><a href="{% url 'website:register' %}" class="register-notify">Registration closes in 5 Days</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
@@ -169,10 +170,6 @@
                                 <div id="dates">
                                     <h4 class="garmond" align="center"><u>Important Dates</u></h4>
                                     <table class="table table-bordered">
-                                        <tr>
-                                            <td>25<sup>th</sup> &nbsp;&nbsp; Nov 2014</td>
-                                            <td>Call for Proposals ends.</td>
-                                        </tr>
                                         <tr>
                                             <td>1<sup>st</sup> &nbsp;&nbsp; Dec 2014</td>
                                             <td>Conference Registration ends.</td>
