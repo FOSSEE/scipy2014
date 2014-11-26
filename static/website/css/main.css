@@ -316,6 +316,14 @@ body {
     font-weight: 300;
 }
 
+.notify{
+    background-color:#eee;
+    border-radius:3px;
+    margin-top:10px;
+    padding-left:3px;
+    padding-right:3px;
+}
+
 .white-popup {
   position: relative;
   background: #FFF;
