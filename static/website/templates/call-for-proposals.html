@@ -13,28 +13,10 @@ Call for Proposals
 <div class="row">
     <div class="col-md-{% if user.is_authenticated %}6{% else %}8{% endif %}">
         <p>
-            We look forward to submissions for presentations at SciPy India
-            2014. Please submit an abstract of 300 to 500 words describing the
-            topic, including its relevance to Python. Only submissions with an
-            actual implementation will be considered for presentation (i.e.
-            proposals to implement the code are not acceptable, partial
-            implementations are acceptable so long as they demonstrate the
-            features discussed). Please provide links to your code if this is
-            an open source implementation. Based on the quality of the
-            submissions, the conference organizers will select it either as a
-            full fledged talk (20-30 mins) or <a href="http://en.wikipedia.org/wiki/PechaKucha" target="_blank">Pecha Kucha</a> style talk.
+            Thank You for your interest in presenting at SciPy India 2014.
+            <br>We regret to inform you that we have closed the CFP for this year.
+            <br>Stay tuned with us, the schedule for the conference will be up soon.
         </p>
-        <p>
-            If you wish to present a talk at the conference, please follow the
-            guidelines below.
-        </p>
-        <h3 class="garmond">Submission Guidelines</h3>
-        <ul>
-            <li>Register to submit a proposal (this registration is NOT the conference registration).</li>
-            <li>Login &amp; Upload your proposal in the form of text file or a pdf file.</li>
-            <li>Submissions whose main purpose is to promote a commercial product or service will be refused.</li>
-            <li>All accepted proposals must be presented at the conference by at least one author.</li>
-        </ul>
         <h3 class="garmond">Important Dates</h3>
         <table class="table table-bordered">
             <tr>
@@ -52,7 +34,6 @@ Call for Proposals
             <!-- Nav tabs -->
             <ul class="nav nav-tabs" role="tablist">
                 <li class="active"><a href="#login" role="tab" data-toggle="tab">Login</a></li>
-                <li><a href="#register" role="tab" data-toggle="tab">Register</a></li>
             </ul> <!-- /.nav-tabs -->
             
             <!-- Tab panes -->
@@ -72,103 +53,17 @@ Call for Proposals
                         <input id="login-submit" class="btn btn-default" type="submit" value="Login">
                     </form>
                 </div>
-                <div class="tab-pane" id="register">
-                    <form id="register-form" action="" method="POST" role="form">{% csrf_token %}
-                        <div id="reg_wrap_id_first_name" class="form-group">
-                            <label for="id_first_name">First Name</label>
-                            {% render_field register_form.first_name class+="form-control" %}
-                        </div>
-                        <div id="reg_wrap_id_last_name" class="form-group">
-                            <label for="id_last_name">Last Name</label>
-                            {% render_field register_form.last_name class+="form-control" %}
-                        </div>
-                        <div id="reg_wrap_id_email" class="form-group">
-                            <label for="id_email">Email</label>
-                            {% render_field register_form.email class+="form-control" %}
-                        </div>
-                        <div id="reg_wrap_id_username" class="form-group">
-                            <label for="id_username">Username</label>
-                            {% render_field register_form.username class+="form-control" %}
-                        </div>
-                        <div id="reg_wrap_id_password1" class="form-group">
-                            <label for="id_password1">Password</label>
-                            {% render_field register_form.password1 class+="form-control" %}
-                        </div>
-                        <div id="reg_wrap_id_password2" class="form-group">
-                            <label for="id_password2">Repeat Password</label>
-                            {% render_field register_form.password2 class+="form-control" %}
-                        </div>
-                        <input id="register-submit" class="btn btn-default" type="submit" value="Register">
-                    </form>
-                </div>
             </div> <!-- /.tab-content -->
         {% else %}
         <div class="well">
             <span class="label label-default" href="#" id="welcome">Hello {{ request.user }}!</span>
             <a class="label label-primary" href="#" id="logout">Logout</a>
-            {% if proposal_form %}
-                <h3 class="garmond"><u>Proposal Form{% if edit %} &mdash; Edit{% endif %}</u></h3>
-                <form id="proposal-form" action="" method="POST" role="form" enctype="multipart/form-data">{% csrf_token %}
-                    <div id="wrap_id_title" class="form-group">
-                        <label for="id_title">Title<sup class="red-star">*</sup></label> <small class="help">(Please enter your proposal title)</small>
-                        {% render_field proposal_form.title class+="form-control" %}
-                        {{ proposal_form.title.errors }}
-                    </div>
-                    <div id="wrap_id_objective" class="form-group">
-                        <label for="id_objective">Objective<sup class="red-star">*</sup></label> <small class="help">(Please enter your proposal objective)</small>
-                        {% render_field proposal_form.objective class+="form-control" %}
-                        {{ proposal_form.objective.errors }}
-                    </div>
-                    <div id="wrap_id_abstract" class="form-group">
-                        <label for="id_abstract">Abstract<sup class="red-star">*</sup></label> <small class="help">(Proposal abstract)</small>
-                        {% render_field proposal_form.abstract class+="form-control" %}
-                        {{ proposal_form.abstract.errors }}
-                    </div>
-                    <div id="wrap_id_bio" class="form-group">
-                        <label for="id_bio">Bio<sup class="red-star">*</sup></label> <small class="help">(Your professional bio/designation etc.)</small>
-                        {% render_field proposal_form.bio class+="form-control" %}
-                        {{ proposal_form.bio.errors }}
-                    </div>
-                    <div id="wrap_id_link" class="form-group">
-                        <label for="id_link">Link</label> <small class="help">(proposal related  link, if any)</small>
-                        {% render_field proposal_form.link class+="form-control" %}
-                        {{ proposal_form.link.errors }}
-                    </div>
-                    <div id="wrap_id_attachment" class="form-group">
-                        <label for="id_attachment">Attachment<sup class="red-star">*</sup></label> <small class="help">(<b>[.pdf]</b> of complete proposal)</small>
-                        {% if edit%}<br>{% endif %}
-                        {% render_field proposal_form.attachment class+="form-control" %}
-                        {{ proposal_form.attachment.errors }}
-                    </div>
-                    <input id="proposal-submit" class="btn btn-primary" type="submit" value="{% if edit %}Update{% else %}Submit{% endif %} Proposal">
-                    {% if edit%}
-                        <a class="btn btn-default" href="{% url 'website:call_for_proposals' %}">Cancel</a>
-                    {% endif %}
-                </form>
-            {% endif %}
-            {% if proposal %}
-                <div class="panel panel-default">
-                    <div class="panel-heading garmond">
-                        Your Proposal is
-                        <span class="label label-info">Under Review</span>
-                    </div>
-                    <div class="panel-body">
-                        <h6 class="garmond"><u>Title</u></h6>
-                        <p><small>{{ proposal.title }}</small></p>
-                        <h6 class="garmond"><u>Objective</u></h6>
-                        <p><small>{{ proposal.objective }}</small></p>
-                        <h6 class="garmond"><u>Abstract</u></h6>
-                        <p><small>{{ proposal.abstract }}</small></p>
-                        <h6 class="garmond"><u>Bio</u></h6>
-                        <p><small>{{ proposal.bio }}</small></p>
-                        <h6 class="garmond"><u>Attachment</u></h6>
-                        <p><small><a href="{{ proposal.attachment.url }}" target="_blank">View Attachment</</small></p>
-                    </div>
-                    <div class="panel-footer">
-                        <a class="btn btn-info" href="{% url 'website:call_for_proposals' 'edit'%}">Edit Proposal</a>
-                    </div>
-                </div>
-            {% endif %}
+                <p>
+                    CFP for SciPy India 2014 has been closed.
+                    <br>We are reviewing the proposals received & will soon 
+                    announce the list of selected abstracts.
+                    <br>Stay tuned with us.
+                </p>
         </div> <!-- /.well -->
         {% endif %}
     </div> <!-- /.col -->
