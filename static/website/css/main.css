@@ -339,3 +339,12 @@ body {
     color: green!important;
     font-family: -webkit-body;
 }
+
+
+
+.table-bordered tr:nth-child(odd){ 
+		background: #D3D3D3;
+	}
+.table-bordered tr:nth-child(even){
+		background: #EDEDED;
+	}
