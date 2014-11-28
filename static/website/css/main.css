@@ -12,7 +12,7 @@ body {
     background-color: #f3f1ea;
 }
 #page-wrapper {
-    max-width: 1010px;
+    max-width: 1050px;
     margin: 25px auto 10px;
     padding: 0 0 35px 0;
     background: #ffffff;
@@ -334,10 +334,9 @@ body {
 }
 
 .register-notify{
-    font-weight: 900;
-    background-color: #284942;
-    color: white!important;
-    font-family: -webkit-body;
+    font-size: 1.3em;
+    background-color: #238E68;
+    color: black!important;
 }
 
 
