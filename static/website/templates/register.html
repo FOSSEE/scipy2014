@@ -1,4 +1,5 @@
 {% extends 'website/templates/base.html' %}
+{% load static %}
 
 {% block sidebar %}
 {% endblock %}
@@ -30,7 +31,7 @@
                         <td>800.0 INR</td>
                     </tr>
                     <tr>
-                        <td>T-Shirt</td>
+                        <td><a href="#" data-toggle="modal" data-target="#teeModal">T-Shirt</a> (click to view the design)</td>
                         <td>250.0 INR</td>
                     </tr>
                 </table>
@@ -81,4 +82,17 @@
             </p>
         </div> <!-- /.col -->
     </div><!-- /row -->
+    <div class="modal fade" id="teeModal" tabindex="-1" role="dialog" aria-labelledby="teeModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="teeModalLabel">SciPy India 2014: T-Shirt Design</h4>
+          </div>
+          <div class="modal-body">
+            <img width=570 height=520 src="{% static 'website/images/front.JPG' %}">
+          </div>
+        </div>
+      </div>
+    </div>
 {% endblock %}
