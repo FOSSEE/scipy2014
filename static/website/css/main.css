@@ -334,9 +334,10 @@ body {
 }
 
 .register-notify{
-    font-size: 1.3em;
-    background-color: #238E68;
-    color: black!important;
+    font-size: 1em;
+    background-color: aqua;
+    color: orange!important;
+    font-family: "sans";
 }
 
 
