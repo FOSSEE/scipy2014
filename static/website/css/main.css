@@ -348,3 +348,18 @@ body {
 .table-bordered tr:nth-child(even){
 		background: #EDEDED;
 	}
+
+.schedule{
+    font-weight: bold;
+    font-family: monospace;
+}
+
+.schedule td{
+    text-align: center;
+}
+
+.schedule th{
+    text-align: center;
+    background-color: #213D30;
+    color: white;
+}
