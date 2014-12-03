@@ -340,6 +340,9 @@ body {
     font-family: "sans";
 }
 
+.nav{
+    font-weight: bold;
+}
 
 
 .table-bordered tr:nth-child(odd){ 
