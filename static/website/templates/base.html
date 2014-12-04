@@ -50,6 +50,7 @@
                             <li class="{% active request 'contact' %}"><a href="{% url 'website:contact' %}">Contact Us</a></li-->
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
+                            <li><a href="{% static 'website/docs/instruction.pdf' %}">Instructions</a>
                             <li class="{% active request 'register' %}"><a href="{% url 'website:register' %}">Register</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
